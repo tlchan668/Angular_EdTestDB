@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<div class = "component">
+    <table class= "table table-sm">
+        <tr>
+            <th align="left">Id</th>
+            <th align="left">Name</th>
+            <th align="left">SAT</th>
+            <th align="left">GPA</th>
+            <th align="left">Major</th>
+          </tr>
+        <tr *ngFor="let s of students">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.sat}}</td>
+            <td>{{s.gpa}}</td>
+            <td>{{s.major != null ? s.major.name : "Undeclared"}}</td>
+        </tr>
+    </table>
+</div>

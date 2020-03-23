@@ -1,0 +1,18 @@
+<app-menu></app-menu>
+<div class = "component">
+    <table class= "table table-sm">
+        <!--headings to self-->
+        <tr>
+            <th align="left">Id</th>
+            <th align="left">Code</th>
+            <th align="left">Name</th>
+            <th align="left">minSat</th>
+          </tr>
+        <tr *ngFor="let m of majors | sort:'code'">
+            <td>{{m.id}}</td>
+            <td>{{m.code}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.minSat}}</td>
+        </tr>
+    </table>
+</div>
