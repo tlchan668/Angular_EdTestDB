@@ -12,6 +12,9 @@ import { MajorEditComponent } from './major/major-edit/major-edit.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { StudentCreateComponent } from './student/student-create/student-create.component';
+import { StudentDetailComponent } from './student/student-detail/student-detail.component';
+import { StudentEditComponent } from './student/student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SortPipe } from './pipes/sort.pipe';
     MajorEditComponent,
     MenuComponent,
     StudentListComponent,
-    SortPipe
+    SortPipe,
+    StudentCreateComponent,
+    StudentDetailComponent,
+    StudentEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, 

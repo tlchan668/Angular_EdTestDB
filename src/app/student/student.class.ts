@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http'
+import { Major } from '../major/major.class';
 
 //build model in vs
 export class Student {
@@ -6,7 +7,8 @@ export class Student {
     name: string;
     sat: number;
     gpa: number;
-    majorId?: number;
+    majorId?: number=null;
+    major: Major = null;
 
     constructor  () {}
 }

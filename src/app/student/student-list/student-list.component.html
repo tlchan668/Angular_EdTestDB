@@ -1,4 +1,5 @@
 <app-menu></app-menu>
+<a routerLink="/students/create">Create</a>
 <div class = "component">
     <table class= "table table-sm">
         <tr>
@@ -7,13 +8,19 @@
             <th align="left">SAT</th>
             <th align="left">GPA</th>
             <th align="left">Major</th>
+            <th align="left">Actions</th>
           </tr>
-        <tr *ngFor="let s of students">
+        <tr *ngFor="let s of students | sort:'name'">
             <td>{{s.id}}</td>
             <td>{{s.name}}</td>
             <td>{{s.sat}}</td>
             <td>{{s.gpa}}</td>
             <td>{{s.major != null ? s.major.name : "Undeclared"}}</td>
+            <td>
+                <a routerLink="/students/detail/{{s.id}}">Detail</a> |
+                <a routerLink="/students/edit/{{s.id}}">Edit</a>
+            </td>
+           
         </tr>
     </table>
 </div>

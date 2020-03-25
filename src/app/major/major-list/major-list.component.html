@@ -1,18 +1,24 @@
 <app-menu></app-menu>
+<a routerLink="/majors/create">Create</a>
 <div class = "component">
     <table class= "table table-sm">
-        <!--headings to self-->
+        
         <tr>
             <th align="left">Id</th>
             <th align="left">Code</th>
             <th align="left">Name</th>
             <th align="left">minSat</th>
+            <th align="left">Actions</th>
           </tr>
         <tr *ngFor="let m of majors | sort:'code'">
             <td>{{m.id}}</td>
             <td>{{m.code}}</td>
             <td>{{m.name}}</td>
             <td>{{m.minSat}}</td>
+            <td>
+                <a routerLink="/majors/detail/{{m.id}}">Detail</a> |
+                <a routerLink="/majors/edit/{{m.id}}">Edit</a>
+            </td>
         </tr>
     </table>
 </div>
