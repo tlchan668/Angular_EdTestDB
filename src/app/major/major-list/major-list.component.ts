@@ -11,6 +11,7 @@ export class MajorListComponent implements OnInit {
 
   //properties
   majors: Major[] = [];
+  searchCriteria: string='';
   
   constructor(
     private major: MajorService

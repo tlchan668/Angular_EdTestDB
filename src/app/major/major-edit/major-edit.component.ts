@@ -25,7 +25,7 @@ export class MajorEditComponent implements OnInit {
   }
   constructor(
     private majorsvc: MajorService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute, //read variable off the route
     private router: Router //navigate back to list
   ) { }
 

@@ -9,7 +9,10 @@ const url: string = "http://localhost:5000/api/majors";
   providedIn: 'root'
 })
 export class MajorService {
-
+  checkCode(code: any): Observable<any> {
+    //bring back all the rows
+    return this.http.get(`${url}/code/${code}`) as Observable<any>;
+  }
   list(): Observable<Major[]> {
     //bring back all the rows
     return this.http.get(`${url}`) as Observable<Major[]>;
